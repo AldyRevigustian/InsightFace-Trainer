@@ -192,29 +192,6 @@ print(f"Model trained on {training_info['total_persons']} persons")
 print(f"Person names: {training_info['person_names']}")
 ```
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-### Development Setup
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🌐 Acknowledgments
-
-- [InsightFace](https://github.com/deepinsight/insightface) - Face analysis toolkit and embedding models
-- [PySide6](https://doc.qt.io/qtforpython/) - Python GUI framework
-- [scikit-learn](https://scikit-learn.org/) - Machine learning library
-- [OpenCV](https://opencv.org/) - Computer vision library
-
 ## 📚 Related Resources
 
 - **InsightFace Repository**: [https://github.com/deepinsight/insightface](https://github.com/deepinsight/insightface)
