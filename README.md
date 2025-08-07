@@ -1,13 +1,16 @@
 # 🤖 InsightFace Trainer
 
+<div align="center">
+<img src="Demo/Tutorial.gif" alt="Application Demo"><br>
+
+<h3>GUI application for training face recognition models using <a href="https://github.com/deepinsight/insightface">InsightFace</a> embeddings and an SVM classifier. With automatic face verification and real-time training progress.</h3>
+  
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![PySide6](https://img.shields.io/badge/PySide6-GUI-green?logo=qt&logoColor=white)](https://doc.qt.io/qtforpython/)
 [![InsightFace](https://img.shields.io/badge/InsightFace-Face%20Recognition-orange)](https://github.com/deepinsight/insightface)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-red?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 
-GUI application for training face recognition models using [InsightFace](https://github.com/deepinsight/insightface) embeddings and SVM classifier. Features automatic face verification, and real-time training progress.
-
-![Application Demo](Demo/Tutorial.gif)
+</div>
 
 ## ✨ Features
 
