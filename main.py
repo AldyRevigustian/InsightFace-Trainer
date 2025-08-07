@@ -266,7 +266,7 @@ class TrainingWorker(QRunnable):
             os.makedirs(os.path.dirname(self.model_output_path), exist_ok=True)
 
             joblib.dump((svm_classifier, label_encoder), self.model_output_path)
-            person_names_json = self.model_output_path.replace(".pkl", "_names.json")
+            info_json_path = os.path.join(os.path.dirname(self.model_output_path), "info.json")
 
             training_info = {
                 "model_file": os.path.basename(self.model_output_path),
@@ -278,7 +278,7 @@ class TrainingWorker(QRunnable):
                 "dataset_path": self.dataset_path,
             }
 
-            with open(person_names_json, "w", encoding="utf-8") as f:
+            with open(info_json_path, "w", encoding="utf-8") as f:
                 json.dump(training_info, f, indent=2, ensure_ascii=False)
 
             self.signals.status.emit(f"Model and training info saved successfully")
@@ -910,10 +910,10 @@ class ModernTrainingWindow(QMainWindow):
         if not output_folder.endswith("/"):
             output_folder += "/"
 
-        names_json_file = model_name.replace(".pkl", "_names.json")
+        info_json_file = "info.json"
 
         self.log_message(f"💾 Model saved: {model_name}")
-        self.log_message(f" Training info (JSON): {names_json_file}")
+        self.log_message(f"📋 Training info (JSON): {info_json_file}")
         self.log_message(f"📁 Output folder: {output_folder}")
 
         self.set_buttons_enabled(True)
@@ -924,7 +924,7 @@ class ModernTrainingWindow(QMainWindow):
             f"Model training completed successfully! 🎉\n\n"
             f"Files saved:\n"
             f"• {model_name} (Model)\n"
-            f"• {names_json_file} (Training Info)",
+            f"• {info_json_file} (Training Info)",
         )
 
     def on_worker_error(self, error_msg):
